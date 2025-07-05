@@ -52,10 +52,15 @@ signOut() => Promise<void>
 
 #### SocialAuthResult
 
-| Prop          | Type                |
-| ------------- | ------------------- |
-| **`idToken`** | <code>string</code> |
-| **`id`**      | <code>string</code> |
+| Prop              | Type                |
+| ----------------- | ------------------- |
+| **`idToken`**     | <code>string</code> |
+| **`id`**          | <code>string</code> |
+| **`email`**       | <code>string</code> |
+| **`displayName`** | <code>string</code> |
+| **`givenName`**   | <code>string</code> |
+| **`familyName`**  | <code>string</code> |
+| **`photoUrl`**    | <code>string</code> |
 
 
 #### SocialAuthOptions
