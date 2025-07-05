@@ -13,25 +13,73 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`signIn(...)`](#signin)
+* [`signOut()`](#signout)
+* [Interfaces](#interfaces)
+* [Enums](#enums)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### signIn(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+signIn(options: SocialAuthOptions) => Promise<SocialAuthResult>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                                            |
+| ------------- | --------------------------------------------------------------- |
+| **`options`** | <code><a href="#socialauthoptions">SocialAuthOptions</a></code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#socialauthresult">SocialAuthResult</a>&gt;</code>
 
 --------------------
+
+
+### signOut()
+
+```typescript
+signOut() => Promise<void>
+```
+
+--------------------
+
+
+### Interfaces
+
+
+#### SocialAuthResult
+
+| Prop                    | Type                |
+| ----------------------- | ------------------- |
+| **`idToken`**           | <code>string</code> |
+| **`email`**             | <code>string</code> |
+| **`displayName`**       | <code>string</code> |
+| **`familyName`**        | <code>string</code> |
+| **`givenName`**         | <code>string</code> |
+| **`profilePictureUri`** | <code>string</code> |
+
+
+#### SocialAuthOptions
+
+| Prop                 | Type                                                              |
+| -------------------- | ----------------------------------------------------------------- |
+| **`provider`**       | <code><a href="#socialauthprovider">SocialAuthProvider</a></code> |
+| **`clientId`**       | <code>string</code>                                               |
+| **`serverClientId`** | <code>string</code>                                               |
+| **`scopes`**         | <code>string[]</code>                                             |
+
+
+### Enums
+
+
+#### SocialAuthProvider
+
+| Members      | Value                 |
+| ------------ | --------------------- |
+| **`GOOGLE`** | <code>'google'</code> |
+| **`APPLE`**  | <code>'apple'</code>  |
 
 </docgen-api>

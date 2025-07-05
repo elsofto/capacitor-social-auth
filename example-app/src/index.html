@@ -8,17 +8,47 @@
       content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="format-detection" content="telephone=no" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      button {
+        background: #4285f4;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        margin: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #3367d6;
+      }
+      #user-info {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #f9f9f9;
+      }
+    </style>
   </head>
   <body>
     <main>
-      <h1>Capacitor Test Plugin Project</h1>
-      <p>
-        This project can be used to test out the functionality of your plugin. Nothing in the
-        <em>example-app/</em> folder will be published to npm when using this template, so you can create away!
-      </p>
-      <label for="echoInput">Echo Text:</label>
-      <input type="text" id="echoInput" name="echoInput" value="Hello World!" />
-      <button onclick="testEcho()">Click Me!</button>
+      <h1>Google Sign-In Plugin Demo</h1>
+      <p>This demo shows the modern Google Sign-In implementation using Credential Manager.</p>
+
+      <button onclick="testSign()">Sign In with Google</button>
+      <button onclick="testSignOut()">Sign Out</button>
+
+      <div id="user-info">
+        <h3>Not signed in</h3>
+        <p>Click "Sign In with Google" to get started.</p>
+      </div>
     </main>
 
     <script src="./js/example.js" type="module"></script>
