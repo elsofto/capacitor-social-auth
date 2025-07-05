@@ -11,11 +11,7 @@ export class SocialAuthWeb extends WebPlugin implements SocialAuthPlugin {
     // For now, return mock data
     return {
       idToken: 'mock-id-token',
-      email: 'user@example.com',
-      displayName: 'Mock User',
-      familyName: 'User',
-      givenName: 'Mock',
-      profilePictureUri: 'https://example.com/avatar.jpg',
+      id: '12423423534634623'
     };
   }
 

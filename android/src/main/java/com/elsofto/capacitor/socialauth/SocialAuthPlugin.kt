@@ -85,17 +85,11 @@ class SocialAuthPlugin : Plugin() {
                             .createFrom(credential.data)
 
                         val idToken = googleIdTokenCredential.idToken
-                        val email = googleIdTokenCredential.id
-                        val displayName = googleIdTokenCredential.displayName
-                        val familyName = googleIdTokenCredential.familyName
-                        val profilePictureUri = googleIdTokenCredential.profilePictureUri
+                        val id = googleIdTokenCredential.id
 
                         val jsResult = JSObject().apply {
                             put("idToken", idToken)
-                            put("email", email)
-                            put("displayName", displayName)
-                            put("familyName", familyName)
-                            put("profilePictureUri", profilePictureUri)
+                            put("id", id)
                         }
                         call.resolve(jsResult)
                     } else {

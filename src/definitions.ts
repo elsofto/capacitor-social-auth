@@ -14,11 +14,7 @@ export interface SocialAuthOptions {
 
 export interface SocialAuthResult {
   idToken: string;
-  email: string;
-  displayName: string;
-  familyName: string;
-  givenName: string;
-  profilePictureUri?: string;
+  id: string;
 }
 
 
